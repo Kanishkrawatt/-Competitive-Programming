@@ -1,19 +1,15 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-int main(){
-    int n,power = 1,check=0;
-    cin >> n;
-    while(n>=power){
-        if(n == power){
-            check = 1;
-            cout << "YES";
-            break;
-        }
-        n *=2;
+int main() {
+    int N;
+    cin>>N;
+    if(N%2==0||N==1)
+    {
+        cout<<"YES";
     }
-    if(check ==0){
-        cout << "NO";
+    else
+    {
+        cout<<"NO";
     }
+    return 0;
 }
