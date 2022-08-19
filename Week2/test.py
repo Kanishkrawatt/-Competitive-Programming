@@ -1,10 +1,26 @@
-x = [[3,5],"mimsy",2,"borogove",1]  # Statement 1
-y = x[0:50]                          # Statement 2
-z = y                                # Statement 3
-w = x                                # Statement 4
-x[1] = x[1][:5] + 'ery'              # Statement 5
-y[1] = 4                             # Statement 6
-w[1][:3] = 'fea'                     # Statement 7
-z[4] = 42                            # Statement 8
-x[0][0] = 5555                       # Statement 9
-a = (x[3][1] == 1)                   # Statement 10
+t=int(input())
+while(t!=0):
+    passengers=0
+    n,q=list(map(int,input().split()))
+    s=[int(s) for s in input().split()]
+    Q=[]
+    for i in range(q):
+        p1 = list(map(int,input().split()))
+        Q.append(p1)
+
+
+    for i in range(q):
+        f_elem=Q[i][0]
+        s_elem=Q[i][1]
+        if((f_elem in s)and(s_elem in s)):
+            f_ind=s.index(f_elem)
+            try:
+                    s_ind=s.index(s_elem,f_ind)
+                    passengers+=1
+            except:
+                    pass
+                    
+            
+    print(passengers)
+    t-=1
+    

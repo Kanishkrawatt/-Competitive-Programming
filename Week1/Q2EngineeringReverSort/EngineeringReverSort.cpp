@@ -53,7 +53,7 @@
                     for(int j=0;j<n;j++){
                         arr[j] = j+1;
                     }
-                    int newarr[50] = CostToArray();
+                    
                     cout << "Else Case"<< endl;
                 }
             }
